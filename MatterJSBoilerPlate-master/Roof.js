@@ -1,0 +1,20 @@
+class Roof{
+    constructor(x,y,width,height){
+        var roofOptions = {
+            isStatic:true
+        }
+        this.body = Bodies.rectangle(x, y, width, height, roofOptions);
+        this.width = width
+        this.height = height
+        World.add(world,this.body);
+
+
+        
+    }
+    display(){
+        fill(126, 234, 234)
+        rectMode(CENTER)
+        rect(this.body.position.x, this.body.position.y, this.width, this.height)
+        
+    }
+}
